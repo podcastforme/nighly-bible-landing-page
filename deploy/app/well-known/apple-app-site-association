@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "com.podcastforme.mobileBible",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "appID": "com.podcastforme.mobileBible.RunnerTest",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  }
+}

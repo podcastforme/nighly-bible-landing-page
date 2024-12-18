@@ -1,17 +1,23 @@
 .PHONY: init deploy-staging deploy-prod diff-staging diff-prod
 
+SLUG?=nightlybible
+TARGET?=staging
+
+ifeq ($(TARGET),staging)
+	DOMAIN_NAME=www2.nightlybible.com
+else
+	DOMAIN_NAME=www.nightlybible.com
+endif
+
+BUCKET_NAME=$(SLUG)-$(TARGET)-resource
+
 init:
 	pip install -r requirements.txt
 	
 
-deploy-staging:
-	cdk deploy --context env=staging
+deploy:
+	cdk deploy --context domain_name=$(DOMAIN_NAME) --context bucket_name=$(BUCKET_NAME) --context env_name=$(TARGET)
+	cd ../web && aws s3 sync dist s3://$(BUCKET_NAME)
 
-deploy-prod:
-	cdk deploy --context env=prod
-
-diff-staging:
-	cdk diff --context env=staging
-
-diff-prod:
-	cdk diff --context env=prod
+diff:
+	cdk diff --context domain_name=$(DOMAIN_NAME) --context bucket_name=$(BUCKET_NAME) --context env_name=$(TARGET)

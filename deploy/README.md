@@ -1,4 +1,4 @@
-# PodcastForMe Resources CDK
+# NightlyBible Resources CDK
 
 This CDK project creates CloudFront distributions backed by S3 buckets for both production and staging environments.
 
@@ -22,8 +22,8 @@ cdk/
 
 ## Domains
 
-- Production: resource.podcastforme.com
-- Staging: staging-resource.podcastforme.com
+- Production: www.nightlybible.com
+- Staging: www2.nightlybible.com
 
 ## Setup
 

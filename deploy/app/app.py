@@ -5,19 +5,16 @@ from stacks.resource_stack import ResourceStack
 
 app = cdk.App()
 
-# Get environment from context
-env_name = app.node.try_get_context("env")
-if env_name not in ["prod", "staging"]:
-    raise ValueError("env must be either 'prod' or 'staging'")
+env_name = app.node.try_get_context("env_name")
 
 env = cdk.Environment(
     account=os.environ.get("CDK_DEFAULT_ACCOUNT"),
-    region=os.environ.get("CDK_DEFAULT_REGION", "ap-southeast-2")
+    region="us-east-1",
 )
 
 ResourceStack(
     app,
-    f"PodcastForMeResourceStack-{env_name}",
+    f"NightlyBibleResourceStack-{env_name}",
     env_name=env_name,
     env=env
 )

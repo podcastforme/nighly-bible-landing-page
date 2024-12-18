@@ -3,13 +3,13 @@
     "apps": [],
     "details": [
       {
-        "appID": "com.podcastforme.mobileBible",
+        "appID": "com.nightlybible.bible",
         "paths": [
           "*"
         ]
       },
       {
-        "appID": "com.podcastforme.mobileBible.RunnerTest",
+        "appID": "com.nightlybible.bible.RunnerTest",
         "paths": [
           "*"
         ]

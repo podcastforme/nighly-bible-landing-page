@@ -99,11 +99,11 @@ class ResourceStack(Stack):
             "apps": [],
             "details": [
                 {
-                    "appID": "com.nightlybible.bible",
+                    "appID": "com.nightlybible.app",
                     "paths": ["*"]
                 },
                 {
-                    "appID": "com.nightlybible.bible.RunnerTest",
+                    "appID": "com.nightlybible.app.RunnerTest",
                     "paths": ["*"]
                 }
             ]
@@ -118,7 +118,7 @@ class ResourceStack(Stack):
         "relation": ["delegate_permission/common.handle_all_urls"],
         "target": {
             "namespace": "android_app",
-            "package_name": "com.nightlybible.bible",
+            "package_name": "com.nightlybible.app",
             "sha256_cert_fingerprints": ["*"]
         }
     }]

@@ -3,13 +3,13 @@
     "apps": [],
     "details": [
       {
-        "appID": "com.nightlybible.bible",
+        "appID": "com.nightlybible.app",
         "paths": [
           "*"
         ]
       },
       {
-        "appID": "com.nightlybible.bible.RunnerTest",
+        "appID": "com.nightlybible.app.RunnerTest",
         "paths": [
           "*"
         ]

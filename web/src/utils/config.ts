@@ -9,15 +9,15 @@ const templateConfig: TemplateConfig = {
   // Draws grid behind main container
   backgroundGrid: false,
   logo: "/logo.png",
-  theme: "corporate",
+  theme: "sunset",
   // Forces theme to be chosen above, no matter what user prefers
-  forceTheme: false,
+  forceTheme: true,
   // Shows switch to toggle between dark and light modes
-  showThemeSwitch: true,
+  showThemeSwitch: false,
   appStoreLink: "/",  // TODO: fix this 
   // "https://apps.apple.com/us/app/google/id234556",
   googlePlayLink: "/", // TODO: fix this
-  // "https://play.google.com/store/apps/details?id=com.nightlybible.bible",
+  // "https://play.google.com/store/apps/details?id=com.nightlybible.app",
   footer: {
     legalLinks: {
       termsAndConditions: true,
@@ -62,7 +62,7 @@ const templateConfig: TemplateConfig = {
   home: {
     seo: {
       title: "Nightly Bible",
-      description: "Nightly Bible Verses, Background music, Faith Grow and accompany you on your spiritual journey while sleeping.",
+      description: "Nightly Bible Verses with Soothing Background Music—Nurture Your Faith and Feel Guided on Your Spiritual Journey as You Sleep.",
     },
     // testimonials: {
     //   id: "testimonials",
@@ -105,76 +105,64 @@ const templateConfig: TemplateConfig = {
     //     "/misc/companies/tumblr.svg",
     //   ],
     // },
-    // howItWorks: {
-    //   id: "how-it-works",
-    //   title: "How it works",
+    howItWorks: {
+      id: "how-it-works",
+      title: "How it works",
+      subtitle:
+        "As easy as 1, 2, 3",
+      steps: [
+        {
+          title: "Install the App",
+          subtitle:
+            "Download and install the app on your device to get started quickly and easily.",
+          image: "/stock/01.webp",
+        },
+        {
+          title: "Charge your phone and let it play",
+          subtitle:
+            "The app recites Bible verses gently with soothing background music to help you fall asleep. Let the words of God guide you into deep, restorative sleep, so you wake up refreshed, energized, and ready to embrace the day ahead.",
+          image: "/stock/02.webp",
+        },
+        {
+          title: "Wake up refreshed",
+          subtitle:
+            "Wake up refreshed and energized, ready to embrace a new day, with love from God.",
+          image: "/stock/03.webp",
+        }
+      ],
+    },
+    // features: {
+    //   id: "features",
+    //   title: "Grow faith while you sleep",
     //   subtitle:
-    //     "Explore our comprehensive step-by-step guide to understand how our process ensures seamless and effective results",
-    //   steps: [
+    //     "You faith grows, silently, but strongly, even without you being aware.",
+    //   cards: [
     //     {
-    //       title: "Install the App",
+    //       title: "Seamless Integration",
     //       subtitle:
-    //         "Download and install the app on your device to get started quickly and easily.",
-    //       image: "/stock/01.webp",
+    //         "Connect effortlessly with all your devices, ensuring smooth and efficient workflows across different platforms and applications without any disruptions",
+    //       icon: "/3D/link-front-color.webp",
     //     },
     //     {
-    //       title: "Create an Account",
+    //       title: "24/7 Customer Support",
     //       subtitle:
-    //         "Sign up by entering your personal details and verifying your email to create a new account in just a few minutes.",
-    //       image: "/stock/02.webp",
+    //         "Get assistance whenever you need it with our dedicated customer support team, available around the clock to help resolve any issues you may encounter",
+    //       icon: "/3D/clock-front-color.webp",
     //     },
     //     {
-    //       title: "Set Up Your Profile",
+    //       title: "Intuitive Design",
     //       subtitle:
-    //         "Complete your profile by adding necessary information and preferences to personalize your experience on the platform.",
-    //       image: "/stock/03.webp",
+    //         "Navigate through our intuitive and easy-to-use interface designed to enhance user experience, making it accessible for users of all skill levels",
+    //       icon: "/3D/roll-brush-front-color.webp",
     //     },
     //     {
-    //       title: "Explore Features",
+    //       title: "Top-Notch Security",
     //       subtitle:
-    //         "Navigate through the app to discover various features and tools designed to enhance your productivity and engagement.",
-    //       image: "/stock/04.webp",
-    //     },
-    //     {
-    //       title: "Connect with Others",
-    //       subtitle:
-    //         "Start connecting with friends, colleagues, and like-minded individuals to expand your network and collaborate efficiently.",
-    //       image: "/stock/05.webp",
+    //         "Protect your data with our top-notch security protocols, offering robust encryption and real-time monitoring to keep your information safe and secure",
+    //       icon: "/3D/sheild-front-color.webp",
     //     },
     //   ],
     // },
-    features: {
-      id: "features",
-      title: "Transform Your Daily Routine",
-      subtitle:
-        "Elevate your lifestyle with our innovative mobile app, designed for seamless living",
-      cards: [
-        {
-          title: "Seamless Integration",
-          subtitle:
-            "Connect effortlessly with all your devices, ensuring smooth and efficient workflows across different platforms and applications without any disruptions",
-          icon: "/3D/link-front-color.webp",
-        },
-        {
-          title: "24/7 Customer Support",
-          subtitle:
-            "Get assistance whenever you need it with our dedicated customer support team, available around the clock to help resolve any issues you may encounter",
-          icon: "/3D/clock-front-color.webp",
-        },
-        {
-          title: "Intuitive Design",
-          subtitle:
-            "Navigate through our intuitive and easy-to-use interface designed to enhance user experience, making it accessible for users of all skill levels",
-          icon: "/3D/roll-brush-front-color.webp",
-        },
-        {
-          title: "Top-Notch Security",
-          subtitle:
-            "Protect your data with our top-notch security protocols, offering robust encryption and real-time monitoring to keep your information safe and secure",
-          icon: "/3D/sheild-front-color.webp",
-        },
-      ],
-    },
     // faq: {
     //   id: "faq",
     //   title: "Frequently Asked Questions",
@@ -207,16 +195,16 @@ const templateConfig: TemplateConfig = {
     //   ],
     // },
     header: {
-      headline: "Nightly Bible Verse Accompany Your Sleep",
+      headline: "Drift Into Peaceful Rest with the Word of God",
       subtitle:
-        "Let the Holy Spirit guide you through the night, give you faith and rest, and you will wake refreshed and ready to face the day.",
+        "Let calming, spoken Bible verses fill your nights with faith and tranquility. Allow the soothing words to guide you into deep, restorative sleep, so you wake up refreshed, energized, and ready to embrace the day ahead.",
       screenshots: [
         "/screenshots/1.png",
         "/screenshots/2.png",
       ],
       // rewards: ["App of the year \n 1st", "Product of the day"], // TODO : fix this
       // usersDescription: "100+ people already using the app",
-      headlineMark: [100, 3],
+      headlineMark: [100, 100],
     },
     // pricing: {
     //   id: "pricing",

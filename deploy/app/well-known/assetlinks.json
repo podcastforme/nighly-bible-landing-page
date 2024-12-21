@@ -5,7 +5,7 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.nightlybible.bible",
+      "package_name": "com.nightlybible.app",
       "sha256_cert_fingerprints": [
         "*"
       ]

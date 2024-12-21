@@ -60,7 +60,7 @@ You have the right to:
 
 ## Children's Privacy
 
-Our App is not intended for children under 13. We do not knowingly collect information from children under 13.
+Children under 13 must be accompanied by a parent or guardian when using our App. We do not knowingly collect information from children under 13.
 
 ## Changes to This Policy
 

@@ -13,8 +13,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sketch: ["CabinSketch", ...defaultTheme.fontFamily.mono],
-        sans: ["Rowdies", ...defaultTheme.fontFamily.sans],
+        sketch: ["GideonRoman", ...defaultTheme.fontFamily.mono],
+        sans: ["GideonRoman", ...defaultTheme.fontFamily.sans],
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",

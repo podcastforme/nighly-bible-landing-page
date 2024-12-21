@@ -41,8 +41,6 @@ You can change the theme from src/utils/config.ts too. See all available themes 
 ## Used assets
 
 ### Fonts
-- [CabinSketch](https://fonts.google.com/specimen/Cabin+Sketch)
-- [Rowdies](https://fonts.google.com/specimen/Rowdies)
 
 ### Iphone frames
 - [Iphone 15](https://www.figma.com/community/file/1385659531316001292)

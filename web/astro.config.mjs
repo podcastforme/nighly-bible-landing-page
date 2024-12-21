@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-
+import partytown from '@astrojs/partytown'
 import robotsTxt from "astro-robots-txt";
 
 import sitemap from "@astrojs/sitemap";
@@ -22,5 +22,11 @@ export default defineConfig({
       },
     },
   },
-  integrations: [react(), tailwind(), robotsTxt(), sitemap()],
+  integrations: [react(), tailwind(), robotsTxt(), sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
 });

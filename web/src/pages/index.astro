@@ -7,3 +7,14 @@ import defaultTemplateConfig from "utils/config"
 <Layout {...defaultTemplateConfig}>
   <HomePage client:load config={defaultTemplateConfig} />
 </Layout>
+
+<!-- Google tag (gtag.js) -->
+<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-29STM3GXXB"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-29STM3GXXB');
+</script>
+

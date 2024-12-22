@@ -48,15 +48,28 @@ class ResourceStack(Stack):
         validation=acm.CertificateValidation.from_email()
     )
 
-    # Create CloudFront distribution
+    # Create CloudFront function for URL rewriting
+    url_rewrite_function = cloudfront.Function(
+        self, f"{env_name}-url-rewrite",
+        code=cloudfront.FunctionCode.from_file(
+            file_path=os.path.join(os.path.dirname(__file__), "../functions/url_rewrite.js")
+        ),
+        comment="Adds index.html to URLs without file extensions",
+        runtime=cloudfront.FunctionRuntime.JS_2_0
+    )
+
+    # Create CloudFront distribution with the function
     distribution = cloudfront.Distribution(
         self, f"{env_name}-distribution",
         default_behavior=cloudfront.BehaviorOptions(
-            origin=origins.S3Origin(
-                bucket,
-                origin_access_identity=origin_identity
-            ),
+            origin=origins.S3Origin(bucket, origin_access_identity=origin_identity),
             viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+            function_associations=[
+                cloudfront.FunctionAssociation(
+                    function=url_rewrite_function,
+                    event_type=cloudfront.FunctionEventType.VIEWER_REQUEST
+                )
+            ],
             allowed_methods=cloudfront.AllowedMethods.ALLOW_GET_HEAD,
             cached_methods=cloudfront.CachedMethods.CACHE_GET_HEAD,
             cache_policy=cloudfront.CachePolicy(

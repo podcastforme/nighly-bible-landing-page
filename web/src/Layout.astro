@@ -48,9 +48,26 @@ const { backgroundGrid, seo, logo, theme, forceTheme } =
       if (theme === "dark" && !forceTheme)
         document.documentElement.setAttribute("data-theme", theme);
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-29STM3GXXB"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-29STM3GXXB');
+    </script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css"
+  />
+
+
   </head>
   <body class="relative">
     {backgroundGrid && <div class="backgroundGrid" />}
     <slot />
+    <script type="module" src="/scripts/cookieconsent-config.js"></script>
   </body>
 </html>

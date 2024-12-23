@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 
 function AppBanner() {
-  const { googlePlayLink, appStoreLink, appBanner } =
+  const { googlePlayLink, appStoreLink, appBanner, localLink } =
     useContext(ConfigContext)!;
 
   if (!appBanner) return null;
@@ -73,6 +73,17 @@ function AppBanner() {
               {appStoreLink && (
                 <li className="m-0 p-0">
                   <a href={appStoreLink}>
+                    <img
+                      className="h-14"
+                      alt="app store logo"
+                      src="/stores/app-store.svg"
+                    />
+                  </a>
+                </li>
+              )}
+              {localLink && (
+                <li className="m-0 p-0">
+                  <a href={localLink}>
                     <img
                       className="h-14"
                       alt="app store logo"

@@ -8,6 +8,7 @@ import SVGBlob from "./svg/blob";
 function Header() {
   const {
     googlePlayLink,
+    localLink,
     appStoreLink,
     home: { header, partners },
   } = useContext(ConfigContext)!;
@@ -107,6 +108,17 @@ function Header() {
                         className="h-14"
                         alt="app store logo"
                         src="/stores/app-store.svg"
+                      />
+                    </a>
+                  </li>
+                )}
+                {localLink && (
+                  <li className="m-0 p-0">
+                    <a href={localLink}>
+                      <img
+                        className="h-14"
+                        alt="download android logo"
+                        src="/stores/android-download.png"
                       />
                     </a>
                   </li>

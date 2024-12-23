@@ -14,10 +14,11 @@ const templateConfig: TemplateConfig = {
   forceTheme: true,
   // Shows switch to toggle between dark and light modes
   showThemeSwitch: false,
-  appStoreLink: "/",  // TODO: fix this 
+  // appStoreLink: "/",  // TODO: fix this 
   // "https://apps.apple.com/us/app/google/id234556",
-  googlePlayLink: "/", // TODO: fix this
+  // googlePlayLink: "/", // TODO: fix this
   // "https://play.google.com/store/apps/details?id=com.nightlybible.app",
+  localLink: "/app/android/nightlybible.apk",
   footer: {
     legalLinks: {
       termsAndConditions: true,

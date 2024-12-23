@@ -11,6 +11,7 @@ export type TemplateConfig = {
     showThemeSwitch: boolean;
     googlePlayLink?: string | undefined;
     appStoreLink?: string | undefined;
+    localLink?: string | undefined;
     termsAndConditions: {
         seo: {
             title: string;

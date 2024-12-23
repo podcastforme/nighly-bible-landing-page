@@ -76,8 +76,8 @@ class ResourceStack(Stack):
                 self, f"{env_name}-cache-policy",
                 cache_policy_name=f"NightlyBible-{env_name}-cache-policy",
                 min_ttl=Duration.seconds(0),
-                max_ttl=Duration.seconds(1 if env_name == "staging" else 31536000),  # 1 year for prod
-                default_ttl=Duration.seconds(1 if env_name == "staging" else 86400),  # 1 day for prod
+                max_ttl=Duration.seconds(1 if env_name == "staging" else 3600),  # 1 year for prod
+                default_ttl=Duration.seconds(1 if env_name == "staging" else 60),  # 1 day for prod
                 enable_accept_encoding_brotli=True,
                 enable_accept_encoding_gzip=True,
             ) if env_name == "staging" else None
@@ -153,6 +153,12 @@ class ResourceStack(Stack):
         self, f"{env_name}-cf-url",
         value=distribution.distribution_domain_name,
         description="CloudFront Distribution URL"
+    )
+    CfnOutput(
+        self, f"{env_name}-distribution-id",
+        value=distribution.distribution_id,
+        description="CloudFront Distribution ID",
+        export_name=f"distribution-id"
     )
     CfnOutput(
         self, f"{env_name}-bucket-name",
